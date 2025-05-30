@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보 및 동의•이용 동의서</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <form class="info-form">
+            <h2 class="form-title">개인정보 및 동의•이용 <br>동의서</h2>
+            <div class="agree-list">
+                <div class="agree-chapter">
+                    <div class="agree-title-row">
+                        <span class="agree-title">개인정보 수집 및 이용 동의</span>
+                        <input type="checkbox" class="agree-checkbox">
+                    </div>
+                    <div class="agree-content">
+                        (1) 개인 수집 항목<br>
+                        (2) ~
+                    </div>
+                </div>
+                <div class="agree-chapter">
+                    <div class="agree-title-row">                        
+                        <span class="agree-title">고유식별정보의 수집 및 이용 동의</span>
+                        <input type="checkbox" class="agree-checkbox">
+                    </div>
+                    <div class="agree-content">
+                        (1) 고유식별정보 수집 항목<br>
+                        (2) ~
+                    </div>
+                </div>
+                <div class="agree-chapter">
+                    <div class="agree-title-row">
+                        <span class="agree-title">민감정보 수집 및 이용 동의</span>
+                        <input type="checkbox" class="agree-checkbox">
+                    </div>
+                    <div class="agree-content">
+                        (1) 민감정보 수집 항목<br>
+                        (2) ~
+                    </div>
+                </div>
+                <div class="agree-chapter">
+                    <div class="agree-title-row">
+                        <span class="agree-title">바이오정보 수집 및 이용 동의 <br>(얼굴인식 출역 관리 등록 시)</span>
+                        <input type="checkbox" class="agree-checkbox">
+                    </div>
+                    <div class="agree-content">
+                        (1) 바이오정보 수집 항목
+                    </div>
+                </div>
+                <div class="agree-chapter">
+                    <div class="agree-title-row">
+                        <span class="agree-title">CCTV/드론 촬영 수집 및 <br>이용 동의</span>
+                        <input type="checkbox" class="agree-checkbox">
+                    </div>
+                    <div class="agree-content">
+                        (1) CCTV/드론 촬영 수집 항목
+                    </div>
+                </div>
+            </div>
+            <div class="agree-all-row">
+                <input type="checkbox" id="agree-all" class="agree-checkbox">
+                <label for="agree-all">전체 동의</label>
+            </div>
+            <button type="submit" class="next-btn">작성 완료</button>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    //임시로 작성함
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.agree-chapter').forEach(function(chapter) {
+            chapter.querySelector('.agree-title-row').addEventListener('click', function() {
+                chapter.classList.toggle('open');
+            });
+        });
+        document.getElementById('agree-all').addEventListener('change', function(e) {
+            const checked = e.target.checked;
+            document.querySelectorAll('.agree-checkbox').forEach(cb => cb.checked = checked);
+        });
+    });
+    </script>

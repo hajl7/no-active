@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세 정보 입력</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <form class="info-form">
+            <h2 class="form-title">상세 정보 입력</h2>
+            <div class="form-row" >
+                <label for="type">소속회사</label>
+                <select id="type">
+                    <option>선택</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>연락처</label>
+                <p>010-3447-0374</p> 
+            </div>
+            <div class="form-row">
+                <label >본인성명</label>
+                <p>홍길동</p> 
+            </div>
+            <div class="form-row">
+                <label >생년월일</label>
+                <p>1997.03.01</p> 
+            </div>
+            <div class="form-row">
+                <label >나이</label>
+                <p>만 47세</p> 
+            </div>
+            <div class="form-row">
+                <label for="job">직종</label>
+                <input type="text" id="job" placeholder="텍스트 입력" class="emergency-phone">
+            </div>
+            <div class="form-row">
+                <label>경력</label>
+                <div class="multi-input">
+                    <input type="text" placeholder="입력" >
+                    <span>년</span>
+                    <input type="text" placeholder="입력" >
+                    <span>월</span>
+                </div>
+            </div>
+            <div class="form-row address-row">
+                <label>주소</label>
+                <div class="address-group">
+                    <input type="text" placeholder="선택된 주소 표시" readonly class="emergency-phone">
+                    <button type="button" class="search-btn"><span>🔍</span></button>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="address-detail">상세주소</label>
+                <input type="text" id="address-detail" placeholder="상세 주소 입력" class="emergency-phone">
+            </div>
+            <div class="form-row emergency-row">
+                <label class="emergency-label">비상<br>연락처</label>
+                <div class="emergency-inputs">
+                    <div class="multi-input">
+                        <input type="text" placeholder="성명">
+                        <input type="text" placeholder="관계">
+                    </div>
+                    <input type="text" placeholder="연락처 입력" class="emergency-phone">
+                </div>
+            </div>
+            
+            <button type="submit" class="next-btn">다음</button>
+        </form>
+    </div>
+</body>
+</html>
